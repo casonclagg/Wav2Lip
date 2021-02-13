@@ -1,0 +1,1 @@
+docker run --gpus 1 -it -e INPUT_FACE="/content/data/input.jpg" -e INPUT_AUDIO="/content/data/input.wav" -e PADDING="20" -e OUTPUT_FILE="/content/data/output.mp4" -v /media/ccc/SQUANCHY-SSD/projects/machine-learning/wav2lip-data:/content/data -v /media/ccc/SQUANCHY-SSD/projects/machine-learning/models:/content/pretrained-models ccc/wav2lip /content/run.sh

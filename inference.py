@@ -214,12 +214,11 @@ def main():
 
 	print ("Number of frames available for inference: "+str(len(full_frames)))
 
-	if not args.audio.endswith('.wav'):
-		print('Extracting raw audio...')
-		command = 'ffmpeg -y -i {} -strict -2 {}'.format(args.audio, 'temp/temp.wav')
-
-		subprocess.call(command, shell=True)
-		args.audio = 'temp/temp.wav'
+	# if not args.audio.endswith('.wav'):
+	# 	print('Extracting raw audio...')
+	# 	command = 'ffmpeg -y -i {} -strict -2 {}'.format(args.audio, 'temp/temp.wav')
+	# 	subprocess.call(command, shell=True)
+	# 	args.audio = 'temp/temp.wav'
 
 	wav = audio.load_wav(args.audio, 16000)
 	mel = audio.melspectrogram(wav)
